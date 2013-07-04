@@ -11,7 +11,7 @@ snippet fun
 	}
 # Anonymous Function
 snippet f
-	function(${1}) {${2}};
+	function (${1}) {${2}};
 # if
 snippet if
 	if (${1:true}) {${2}}
@@ -60,15 +60,50 @@ snippet do
 	} while (${1:/* condition */});
 # Object Method
 snippet :f
-	${1:method_name}: function(${2:attribute}) {
+	${1:method_name}: function (${2:attribute}) {
 		${4}
 	}${3:,}
 # setTimeout function
 snippet timeout
-	setTimeout(function() {${3}}${2}, ${1:10};
+	setTimeout(function () {${3}}${2}, ${1:10};
 # Get Elements
 snippet get
 	getElementsBy${1:TagName}('${2}')${3}
 # Get Element
 snippet gett
 	getElementBy${1:Id}('${2}')${3}
+
+
+# Jasmine
+# describe block
+snippet desc
+	describe('${1:description}', function () {
+		${2}
+	});
+# it block
+snippet it
+	it('${1:should do something}', function () {
+		${2}
+	});
+# expectation
+snippet exp
+	expect(${1}).to${2:Be}(${3});
+# waitsFor ... runs
+snippet wf
+	waitsFor(function () {
+		${1}
+	});
+
+	runs(function () {
+		${2}
+	});
+# beforeEach
+snippet before
+	before(function () {
+		${1}
+	});
+# afterEach
+snippet after
+	afterEach(function () {
+		${1}
+	});
